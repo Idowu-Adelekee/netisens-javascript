@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class by Idowu</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .background {
+        /* background-image: linear-gradient(20deg, #126844, #2edf8f); */
+        background-color: green;
+
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 60px;
+        display: inline-block;
+      }
+
+      .button1 {
+        display: flex;
+        padding: 14px 30px;
+        color: #fff;
+        background-color: rgb(60, 191, 239);
+        border: none;
+        border-radius: 9px;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 400px;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          background-color: aliceblue;
+          color: #3a3a3a;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background" onclick="backgroundColor = '00000'">
+      <h1>NETISENS JAVASCRIPT</h1>
+      <button class="button1">Click me</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
