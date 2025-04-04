@@ -208,3 +208,14 @@
 // });
 
 // console.log(window);
+
+"use strict";
+
+console.log("hi");
+
+// THE DEFINITION OF DOM
+// Document Object Model:  Structured representation of HTML Document allows JavaScript to acccess html elements and styles to manipulate them.
+
+// console.log(document.documentElement);
+
+// Function
