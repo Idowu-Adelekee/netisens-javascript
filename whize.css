@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito-sans", sans-serif;
+
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.header {
+  padding: 20px;
+  width: 600px;
+}
+
+.header::after {
+  content: "#200";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/* RESPONSIVE DESIGN 
+1. Fluid layouts
+
+2. Media queries
+a. Desktop First Approach
+b. Mobile First Approach
+  > min-width
+
+A. Desktop First Approach
+ > max-width
+
+3. Responsive units
+
+4. Responsive images */
+
+/* 
+// Icon Library
+https://ionic.io/ionicons
+
+// Optimize images
+https://tinypng.com/
+
+*/
