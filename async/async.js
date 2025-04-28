@@ -83,6 +83,51 @@
 
 // A promise is an object used a  placeholder for the future result of an asynchronous operation
 
-const request = fetch("https://restcountries.com/v2/name/nigeria").then(
-  function (data) {}
-);
+// const request = fetch("https://restcountries.com/v2/name/nigeria")
+//   .then((data) => data.json())
+//   .then((data) => {
+//     console.log(data);
+//   });
+
+const countryContainer = document.querySelector(".countries");
+
+const countryName = function (country) {
+  const request = fetch(`https://restcountries.com/v2/name/${country}`)
+    .then(function (data) {
+      return data.json();
+    })
+    .then(function (data) {
+      const [response] = data;
+      console.log(response);
+
+      const html = `
+      <article class="country">
+          <img class="country__img" src="${response.flag}" />
+          <div class="country__data">
+            <h3 class="country__name">${response.name}</h3>
+            <h4 class="country__region">${response.region}</h4>
+            <p class="country__row"><span>👫</span>${(
+              response.population / 1000000
+            ).toFixed(1)} mil people</p>
+            <p class="country__row"><span>🗣️</span>${
+              response.languages[0].name
+            }</p>
+            <p class="country__row"><span>💰</span>${
+              response.currencies[0].code
+            }</p>
+          </div>
+        </article>
+    `;
+
+      countryContainer.insertAdjacentHTML("beforeend", html);
+    });
+};
+
+countryName("nigeria");
+countryName("ghana");
+countryName("tanzania");
+countryName("usa");
+countryName("france");
+
+// ASSIGNMENT
+// Fetch data from an API and display it on a webpage
