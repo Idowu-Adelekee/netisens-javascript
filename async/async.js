@@ -1,4 +1,3 @@
-"use strict";
 
 // const { setImmediate } = require("async");
 
